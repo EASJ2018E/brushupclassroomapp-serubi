@@ -18,17 +18,26 @@ namespace ClassRoom
             
             List<Studerende> students = new List<Studerende>();
             students.Add(new Studerende("Lucas", 9, 7));
+            students.Add(new Studerende("Thomas", 13, 14));
             students.Add(new Studerende("Rasmus", 7, 16));
 
             klasse.Klasseliste = students;
 
             Console.WriteLine($"Navn: {klasse.KlasseNavn}");
             Console.WriteLine($"Semesterstart: {klasse.SemesterStart.ToString()}");
+            Console.WriteLine();
             Console.WriteLine("Students:");
+
             foreach (Studerende student in klasse.Klasseliste)
             {
-                Console.WriteLine($"Navn: {student.Navn}, Fødselsdag: {student.Fødselsdag}. {new DateTime(2018, student.Fødselsmåned, 1).ToString("MMM", CultureInfo.CreateSpecificCulture("da")) }, Årstid: {student.årstid()}");
+                Console.WriteLine($"Navn: {student.Navn}, Fødselsdag: {student.Fødselsdag}. {new DateTime(2018, student.Fødselsmåned, 1).ToString("MMM", CultureInfo.CreateSpecificCulture("da")) }, Årstid: {student.Årstid()}");
             }
+
+            Console.WriteLine();
+
+            klasse.FødselÅrstid();
+
+            Console.WriteLine();
         }
     }
 }

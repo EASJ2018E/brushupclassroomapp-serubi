@@ -24,6 +24,19 @@ namespace ClassRoom
             _semesterstart = SemesterStart;
         }
 
+        public void FødselÅrstid()
+        {
+            int studentForår = _klasseliste.Where(s => s.Årstid() == "Forår").Select(s => s).Distinct().Count();
+            int studentSommer = _klasseliste.Where(s => s.Årstid() == "Sommer").Select(s => s).Distinct().Count();
+            int studentEfterår = _klasseliste.Where(s => s.Årstid() == "Efterår").Select(s => s).Distinct().Count();
+            int studentVinter = _klasseliste.Where(s => s.Årstid() == "Vinter").Select(s => s).Distinct().Count();
+            Console.WriteLine("Fødselsdag i hver årstid:");
+            Console.WriteLine($"Forår: {studentForår}");
+            Console.WriteLine($"Sommer: {studentSommer}");
+            Console.WriteLine($"Efterår: {studentEfterår}");
+            Console.WriteLine($"Vinter: {studentVinter}");
+        }
+
         public string KlasseNavn
         {
             get { return _klasseNavn; }
