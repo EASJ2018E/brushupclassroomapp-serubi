@@ -37,5 +37,4 @@ namespace ClassRoom
             set { _fødselsdag = value; }
         }
     }
-    }
 }

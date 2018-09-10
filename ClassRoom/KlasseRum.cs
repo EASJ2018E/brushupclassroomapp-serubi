@@ -17,6 +17,13 @@ namespace ClassRoom
             
         }
 
+        public KlasseRum(string KlasseNavn, List<Studerende> Klasseliste, DateTime SemesterStart)
+        {
+            _klasseNavn = KlasseNavn;
+            _klasseliste = Klasseliste;
+            _semesterstart = SemesterStart;
+        }
+
         public string KlasseNavn
         {
             get { return _klasseNavn; }
