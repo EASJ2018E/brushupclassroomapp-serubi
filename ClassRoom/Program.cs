@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,14 @@ namespace ClassRoom
             students.Add(new Studerende("Rasmus", 7, 16));
 
             klasse.Klasseliste = students;
+
+            Console.WriteLine($"Navn: {klasse.KlasseNavn}");
+            Console.WriteLine($"Semesterstart: {klasse.SemesterStart.ToString()}");
+            Console.WriteLine("Students:");
+            foreach (Studerende student in klasse.Klasseliste)
+            {
+                Console.WriteLine($"Navn: {student.Navn}, Fødselsdag: {student.Fødselsdag}. {new DateTime(2018, student.Fødselsmåned, 1).ToString("MMM", CultureInfo.CreateSpecificCulture("da")) }");
+            }
         }
     }
 }
