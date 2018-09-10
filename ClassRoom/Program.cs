@@ -27,7 +27,7 @@ namespace ClassRoom
             Console.WriteLine("Students:");
             foreach (Studerende student in klasse.Klasseliste)
             {
-                Console.WriteLine($"Navn: {student.Navn}, Fødselsdag: {student.Fødselsdag}. {new DateTime(2018, student.Fødselsmåned, 1).ToString("MMM", CultureInfo.CreateSpecificCulture("da")) }");
+                Console.WriteLine($"Navn: {student.Navn}, Fødselsdag: {student.Fødselsdag}. {new DateTime(2018, student.Fødselsmåned, 1).ToString("MMM", CultureInfo.CreateSpecificCulture("da")) }, Årstid: {student.årstid()}");
             }
         }
     }
