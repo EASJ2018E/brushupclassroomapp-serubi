@@ -14,12 +14,18 @@ namespace ClassRoom
 
         public Studerende(string navn, int fødselsmåned, int fødselsdag)
         {
+            if(fødselsmåned > 12 || fødselsmåned < 1)
+            {
+                Console.WriteLine("Ugyldig måned...");
+                return;
+            }
+
             _navn = navn;
             _fødselsmåned = fødselsmåned;
             _fødselsdag = fødselsdag;
         }
 
-        public string årstid()
+        public string Årstid()
         {
             switch (_fødselsmåned)
             {
