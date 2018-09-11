@@ -26,10 +26,10 @@ namespace ClassRoom
 
         public void FødselÅrstid()
         {
-            int studentForår = _klasseliste.Where(s => s.Årstid() == "Forår").Select(s => s).Distinct().Count();
-            int studentSommer = _klasseliste.Where(s => s.Årstid() == "Sommer").Select(s => s).Distinct().Count();
-            int studentEfterår = _klasseliste.Where(s => s.Årstid() == "Efterår").Select(s => s).Distinct().Count();
-            int studentVinter = _klasseliste.Where(s => s.Årstid() == "Vinter").Select(s => s).Distinct().Count();
+            int studentForår = _klasseliste.Where(s => s.Årstid() == "Forår").Select(s => s).Count();
+            int studentSommer = _klasseliste.Where(s => s.Årstid() == "Sommer").Select(s => s).Count();
+            int studentEfterår = _klasseliste.Where(s => s.Årstid() == "Efterår").Select(s => s).Count();
+            int studentVinter = _klasseliste.Where(s => s.Årstid() == "Vinter").Select(s => s).Count();
             Console.WriteLine("Fødselsdag i hver årstid:");
             Console.WriteLine($"Forår: {studentForår}");
             Console.WriteLine($"Sommer: {studentSommer}");

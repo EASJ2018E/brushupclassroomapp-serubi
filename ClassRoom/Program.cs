@@ -18,7 +18,7 @@ namespace ClassRoom
             
             List<Studerende> students = new List<Studerende>();
             students.Add(new Studerende("Lucas", 9, 7));
-            students.Add(new Studerende("Thomas", 13, 14));
+            students.Add(new Studerende("Thomas", 11, 14));
             students.Add(new Studerende("Rasmus", 7, 16));
 
             klasse.Klasseliste = students;
